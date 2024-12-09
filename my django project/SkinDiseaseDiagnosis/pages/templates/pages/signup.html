@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <style>
+        /* Background color similar to reference */
+        body {
+            background-color: #8bc34a;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Container box for signup form */
+        .signup-box {
+            background-color: white;
+            padding: 40px;
+            width: 300px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        /* Heading styling */
+        h1 {
+            font-size: 1.8em;
+            color: #4CAF50;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 1.2em;
+            color: #4CAF50;
+            margin-bottom: 20px;
+        }
+
+        /* Input fields */
+        .signup-box input[type="text"],
+        .signup-box input[type="password"] {
+            width: 100%;
+            padding: 12px;
+            margin: 8px 0;
+            display: block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        /* Signup button styling */
+        .signup-box button {
+            width: 100%;
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .signup-box button:hover {
+            background-color: #45a049;
+        }
+
+        /* Label styling */
+        .signup-box label {
+            float: left;
+            margin-top: 10px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="signup-box">
+        <h1>Welcome to Skin Disease Diagnosis Page!!!</h1>
+        <h2>Sign up</h2>
+        <form method="POST" action="{% url 'signup' %}">
+            {% csrf_token %}
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            
+            <label for="password_confirmation">Password Confirmation:</label>
+            <input type="password" id="password_confirmation" name="password_confirmation" required>
+            
+            <button type="submit">Sign up</button>
+        </form>
+    </div>
+
+</body>
+</html>

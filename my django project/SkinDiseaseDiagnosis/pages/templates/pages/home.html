@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skin Disease Diagnosis</title>
+    <style>
+        /* Setting the background color */
+        body {
+            background-color: #2fb6aa; /* Teal color similar to reference */
+            font-family: 'Arial', sans-serif; /* Adjust font to a bold, clean sans-serif */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            color: white;
+            text-align: center;
+        }
+
+        /* Styling the headings */
+        h1 {
+            font-size: 3em;
+            font-weight: bold;
+            margin: 0.2em 0;
+        }
+
+        h2 {
+            font-size: 1.5em;
+            margin: 0.2em 0;
+        }
+
+        /* Styling buttons */
+        button {
+            background-color: white;
+            color: #2fb6aa;
+            font-size: 1em;
+            padding: 10px 20px;
+            margin: 5px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background-color: #e5e5e5;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to Skin Disease Diagnosis Page!!!</h1>
+    <h2>Welcome!</h2>
+    <a href="{% url 'login' %}"><button>Login</button></a>
+    <a href="{% url 'signup' %}"><button>Signup</button></a>
+</body>
+</html>

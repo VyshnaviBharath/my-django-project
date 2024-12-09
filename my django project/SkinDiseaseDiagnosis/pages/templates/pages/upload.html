@@ -1,0 +1,23 @@
+<!-- templates/pages/upload.html -->
+<h1>Image Upload and Processing</h1>
+
+<form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <input type="file" name="image" accept="image/*">
+    <button type="submit">Upload Image</button>
+</form>
+
+{% if input_image %}
+    <h2>Original Image:</h2>
+    <img src="{{ input_image }}" alt="Uploaded Image" style="max-width: 100%; height: auto;">
+{% endif %}
+
+{% if output_image %}
+    <h2>Processed Image:</h2>
+    <img src="{{ output_image }}" alt="Processed Image" style="max-width: 100%; height: auto;">
+{% endif %}
+
+{% if dimensions %}
+    <h2>Dimensions of Affected Area:</h2>
+    <p>{{ dimensions }}</p>
+{% endif %}
